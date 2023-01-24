@@ -15,14 +15,14 @@ import {Box,Button,ButtonGroup,Flex,HStack,IconButton,Input,SkeletonText,Text} f
       libraries: ['places'],
     })
   
-    const [map, setMap] = useState(/** @type google.maps.Map */ (null))
+    const [map, setMap] = useState( (null))
     const [directionsResponse, setDirectionsResponse] = useState(null)
     const [distance, setDistance] = useState('')
     const [duration, setDuration] = useState('')
   
-    /** @type React.MutableRefObject<HTMLInputElement> */
+    
     const originRef = useRef()
-    /** @type React.MutableRefObject<HTMLInputElement> */
+    
     const destiantionRef = useRef()
   
     if (!isLoaded) {
@@ -63,7 +63,7 @@ import {Box,Button,ButtonGroup,Flex,HStack,IconButton,Input,SkeletonText,Text} f
         w='100vw'
       >
         <Box position='absolute' left={0} top={0} h='100%' w='100%'>
-          {/* Google Map Box */}
+       
           <GoogleMap
             center={center}
             zoom={15}
